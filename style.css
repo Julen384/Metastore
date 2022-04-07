@@ -9,7 +9,18 @@ header{
     align-items: center;
 }
 .ico{
-    
+    animation: icon 1s ease-in-out infinite;
+}
+@keyframes icon{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
 header > p{
     color: white;
