@@ -1,4 +1,5 @@
 body{
+    background-color: black;
     margin: 0;
 }
 header{
@@ -23,29 +24,51 @@ header{
     }
 }
 .cabecera{
+    background: linear-gradient(black, transparent, black), url(./media/img/meta-cab.jpg);
+    background-size: cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 300px;
     background-color: black;
 }
+.boton{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black
+}
 .titulo-cabecera{
+    animation: cabecera 3s ease-in-out 1;
     margin-top: 0px;
     color: white;
 }
+@keyframes cabecera{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
 header > p{
     color: white;
 }
 .anchor-nav{
-    animation: anchor-nav 1s ease-in-out infinite;
+    animation-name: nav;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
     padding: 6px;
     text-decoration: none;
     color: white;
     margin: 0 30px;
     font-family: Arial, Helvetica, sans-serif;
 }
-@keyframes anchor-nav{
+@keyframes nav{ /** ¿Cómo podemos aplicar un efecto :hover para animar? **/
     0%{
         transform: translateY(0px)
     }
@@ -61,4 +84,41 @@ header > p{
         flex-direction: column;
         height: 150px;
     }
+}
+/** Secciones **/
+section{
+    display: flex;
+}
+.contenedor{
+    display: flex;
+    width: 100vw;
+}
+.img-descripcion{
+    width: 30vw;
+}
+.texto-descripcion{
+    padding-left: 20px;
+    margin: 20px;
+    color: aliceblue;
+    font-size: 3em;
+}
+label{
+    color: aliceblue;
+    margin-left: 20px;
+}
+input:focus{
+    background-color: black;
+    color: white;
+    transition: 1s;
+    border-color: coral;
+}
+.texto-descripcion-p{
+    margin: 20px;
+    padding-left: 20px;
+    color: aliceblue;
+    font-size: 2em;
+}
+.text-section{
+    width: 80vw;
+    flex-direction: column;
 }
