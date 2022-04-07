@@ -3,6 +3,7 @@ body{
 }
 header{
     display: flex;
+    height: 100px;
     background-color: black;
     justify-content: space-around;
     align-items: center;
