@@ -1,12 +1,31 @@
 body{
     margin: 0;
 }
+/** Nav de redes sociales que se oculta por el Sticky de la nav principal**/
+.nav-superior{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 30px;
+    align-items: center;
+}
+.redes-sociales{
+    display: flex;
+    align-items: center;
+    
+}
+.red{
+    margin: 0 30px;
+}
 header{
     display: flex;
     height: 100px;
     background-color: black;
     justify-content: space-around;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 .ico{
     animation: icon 3s ease-in-out infinite;
@@ -102,6 +121,7 @@ input:focus{
 /** Animaciones de Emilio **/
 .contenedor-animaciones{
     display: flex;
+    z-index: 0;
 }
 .contenedor{
     background-image: url(./media/img/fuego.png);
